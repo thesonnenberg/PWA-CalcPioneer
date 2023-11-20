@@ -1,7 +1,6 @@
 const CACHE_NAME = 'my-cache-name-v1';
 const URLS_TO_CACHE = [
-    '/',
-    '/offline.html',
+    '/index.html',
     // Include other resources like CSS, JavaScript, and images
     // ...
 ];
@@ -34,9 +33,6 @@ self.addEventListener('fetch', event => {
                         return fetchResponse;
                     });
                 });
-            }).catch(() => {
-                // Fallback to offline page if offline and resource not in cache
-                return caches.match('/offline.html');
             })
     );
 });

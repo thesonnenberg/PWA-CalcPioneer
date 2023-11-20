@@ -7,8 +7,8 @@
     "theme_color": "#ffffff",
     "icons": [
         {
-            "src": "path/to/your/icon.png",
-            "sizes": "any",
+            "src": "images/icon_400x400.png",
+            "sizes": "400x400",
             "type": "image/png"
         }
     ]

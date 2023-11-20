@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
         <link rel="manifest" href="manifest.json">
+        <script src="packendAPI.js"></script>
 
     </head>
     <body>
@@ -22,9 +23,10 @@
         <script src="" async defer></script>
         <script>
             if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/static/sw.js')
+                navigator.serviceWorker.register('/sw.js')
                 .then(() => console.log("Service Worker Registered"));
             }
+            setupDB()
         </script>
         
     </body>
