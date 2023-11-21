@@ -5,6 +5,7 @@ const URLS_TO_CACHE = [
     '/manifest.json',
     '/favicon.ico',
     '/images/icon_400x400.png',
+    '/gui_manager.js'
 ];
 
 // Installing and Caching Resources
