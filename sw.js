@@ -1,19 +1,17 @@
 const CACHE_NAME = 'my-cache-name-v1';
 const URLS_TO_CACHE = [
     '/index.html',
-    // Include other resources like CSS, JavaScript, and images
-    // ...
+    '/backendAPI.js', // Corrected the typo from 'packendAPI.js' to 'backendAPI.js'
+    '/manifest.json',
+    '/favicon.ico',
+    '/images/icon_400x400.png',
 ];
 
 // Installing and Caching Resources
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
-            .then(cache => {
-                console.log('[Service Worker] Install and cache resources');
-                return cache.addAll(URLS_TO_CACHE);
-            })
-            .catch(error => console.error('Caching failed:', error))
+            .then(cache => cache.addAll(URLS_TO_CACHE))
     );
 });
 
@@ -22,31 +20,28 @@ self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)
             .then(response => {
-                // Return cached response if available
                 if (response) {
                     return response;
                 }
-                // Fetch from network and cache the new resources
-                return fetch(event.request).then(fetchResponse => {
-                    return caches.open(CACHE_NAME).then(cache => {
-                        cache.put(event.request, fetchResponse.clone());
-                        return fetchResponse;
-                    });
+                return fetch(event.request).catch(() => {
+                    console.log(`Error: Failed to fetch resource: ${event.request.url}`)
                 });
             })
     );
 });
 
+
 // Activate Event - Cache Management
 self.addEventListener('activate', event => {
-    const cacheWhitelist = [CACHE_NAME];
     event.waitUntil(
-        caches.keys().then(keyList => {
-            return Promise.all(keyList.map(key => {
-                if (cacheWhitelist.indexOf(key) === -1) {
-                    return caches.delete(key);
-                }
-            }));
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames.map(cache => {
+                    if (cache !== CACHE_NAME) {
+                        return caches.delete(cache);
+                    }
+                })
+            );
         })
     );
 });
