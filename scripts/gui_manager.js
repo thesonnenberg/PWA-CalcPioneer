@@ -94,3 +94,8 @@ function handelClearall(){
     ansButton.dataset.value = "null"
     reulthistoryElement.innerHTML = ""
 }
+
+
+
+
+

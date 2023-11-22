@@ -1,12 +1,13 @@
 const CACHE_NAME = 'my-cache-name-v1';
 const URLS_TO_CACHE = [
-    '/calculator.html',
+    '/calculator_app.html',
     '/manifest.json',
-    '/favicon.ico',
+    '/images/favicon.ico',
     '/images/icon_400x400.png',
-    '/gui_manager.js',
-    '/math_parser.js',
-    '/styles.css',
+    '/scripts/gui_manager.js',
+    '/scripts/math_parser.js',
+    '/styles/style.css',
+    '/COPYING.txt',
 ];
 
 // Installing and Caching Resources
@@ -15,6 +16,7 @@ self.addEventListener('install', event => {
         caches.open(CACHE_NAME)
             .then(cache => cache.addAll(URLS_TO_CACHE))
     );
+    window.location.href = '/calculator_app.html'
 });
 
 // Fetch Event Handling

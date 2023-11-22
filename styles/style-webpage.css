@@ -1,0 +1,67 @@
+/* FILEPATH: /c:/Users/sonne/Desktop/PWA/styles.css */
+
+/* Colors */
+:root {
+    /* Background colors */
+    --primary-bg-color: #ffffff;
+    --secondary-bg-color: #f5f5f5;
+    
+    /* Text color */
+    --text-color: #333333;
+    
+    /* Accent color */
+    --accent-color: #ff0000;
+    
+    /* Emphasis colors */
+    --emphasis-color-1: #0013ff;
+    --emphasis-color-2: #00ccff;
+    --emphasis-color-3: #cc00ff;
+    
+    /* Button colors */
+    --button-bg-color: var(
+    --accent-color);
+    --button-text-color: #ffffff;
+    --button-hover-color: #ff3333;
+}
+
+/* Default styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for <p> element */
+p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 1em 0;
+}
+
+/* Styling for <h1> element */
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Styling for <h2> element */
+h2 {
+    margin: 1em 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Styling for <h3> element */
+h3 {
+    margin: 1em 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+section {
+    padding: 2em;
+}

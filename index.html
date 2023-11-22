@@ -4,20 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Progressive Web App</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>PWA CalcPioneer</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/styles/style-webpage.css">
   <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
-  <h1>Welcome to My Progressive Web App</h1>
-  <p>This is a test page for a Progressive Web App (PWA).</p>
-  <p>Please note that this is only for testing purposes and we cannot guarantee proper functioning or correct code.</p>
+  <section>
+    <h1>Welcome to PWA CalcPioneer</h1>
+    <p>Please note that this application is a prototype and is currently in its testing phase. It is intended solely for demonstration and testing purposes by a select group of users. We kindly request that this prototype not be installed or used by anyone outside the designated testing group. The application may still contain bugs, and its features are subject to change. We appreciate your understanding and cooperation in this matter. As a prototype, this application should not be relied upon for critical tasks or considered as a final product. We are constantly working to improve and refine its capabilities, and we look forward to presenting a more polished version in the future. Thank you for your interest and support!</p>
+    <p>Copyright (C) 2023 Tobias Sonnenberg</p>
+    <p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+    <p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+    <p>You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.</p>
+  </section>
 </body>
+
 <script defer>
+  function redirectToCalculatorApp() {
+    window.location.href = "/calculator_app.html";
+  }
+
+  window.addEventListener('appinstalled', (evt) => {
+    console.log('PWA was installed');
+    redirectToCalculatorApp();
+  });
   if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-      .then(() => console.log("Service Worker Registered"));
+      navigator.serviceWorker.register('/scripts/sw.js')
+      .then(() => {
+        console.log("Service Worker Registered")
+      });
   }
 </script>
 
