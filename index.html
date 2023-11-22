@@ -1,88 +1,24 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="manifest" href="manifest.json">
-        <script src="backendAPI.js"></script>
-        <script src="gui_manager.js"></script>
+<html lang="en">
 
-    </head>
-    <body>
-        <header>
-            <h1>Calculator</h1>
-        </header>
-        <main>  
-            <div class="display" id="input_display_history">
-                <p>1history old</p>
-                <p>2history old</p>
-                <p>3history old</p>
-                <p>4history old</p>
-                <p>5history old</p>
-                <p>6history old</p>
-                <p>7history old</p>
-                <p>8history old</p>
-                <p>9history old</p>
-                <p>history old</p>
-                <p>history old</p>
-                <p>history old</p>
-                <p>history old</p>
-                <p>history old</p>
-                <p>history old</p>
-                <p>history old</p>
-                <p>history newer</p>
-                <p>history latest</p>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Progressive Web App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
 
-            <p class="display" id="input_display">Test input display</p>
-            <p class="display" id="result_display">Test result display</p>
-            <div class="buttons">
-                <button id="ans" class="number_or_expression" data-value="null">ANS</button>
-                <button id="clear">C</button>
-                <button id="clearall">C all</button>
-                <button id="divide" class="number_or_expression" data-value="/">÷</button>
-                <button id="7" class="number_or_expression" data-value="7">7</button>
-                <button id="8" class="number_or_expression" data-value="8">8</button>
-                <button id="9" class="number_or_expression" data-value="9">9</button>
-                <button id="multiply" class="number_or_expression" data-value="*">×</button>
-                <button id="4" class="number_or_expression" data-value="4">4</button>
-                <button id="5" class="number_or_expression" data-value="5">5</button>
-                <button id="6" class="number_or_expression" data-value="6">6</button>
-                <button id="minus" class="number_or_expression" data-value="-">-</button>
-                <button id="3" class="number_or_expression" data-value="3">3</button>
-                <button id="2" class="number_or_expression" data-value="2">2</button>
-                <button id="1" class="number_or_expression" data-value="1">1</button>
-                <button id="plus" class="number_or_expression" data-value="+">+</button>
-                <button id="open_bracket"class="number_or_expression" data-value="(">(</button>
-                <button id="0" class="number_or_expression" data-value="0">0</button>
-                <button id="decimal" class="number_or_expression" data-value=".">.</button>
-                <button id="close_bracket" class="number_or_expression" data-value=")">)</button>
-                <button id="equals">=</button>
-                <button id="backspace">⌫</button>
-            </div>
-        </main>
+<body>
+  <h1>Welcome to My Progressive Web App</h1>
+  <p>This is a test page for a Progressive Web App (PWA).</p>
+  <p>Please note that this is only for testing purposes and we cannot guarantee proper functioning or correct code.</p>
+</body>
+<script defer>
+  if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+      .then(() => console.log("Service Worker Registered"));
+  }
+</script>
 
-        <footer>
-            <p>Created by Tobias Sonnenberg</p>
-        </footer>
-
-
-        <script src="" async defer></script>
-        <script>
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js')
-                .then(() => console.log("Service Worker Registered"));
-            }
-            setupDB()
-        </script>
-
-        </body>
-        </html>
+</html>

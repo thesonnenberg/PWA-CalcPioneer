@@ -13,12 +13,13 @@
     --accent-color: #ff0000;
     
     /* Emphasis colors */
-    --emphasis-color-1: #ffcc00;
+    --emphasis-color-1: #0013ff;
     --emphasis-color-2: #00ccff;
     --emphasis-color-3: #cc00ff;
     
     /* Button colors */
-    --button-bg-color: var(--accent-color);
+    --button-bg-color: var(
+    --accent-color);
     --button-text-color: #ffffff;
     --button-hover-color: #ff3333;
 }
@@ -77,14 +78,14 @@ button:hover {
 /* Body Styling */
 body {
     display: grid;
-    grid-template-rows: 1fr 80% 50px;
+    grid-template-rows: 1fr calc(95vh - 60px) 30px;
     height: 100vh; /* Full viewport height */
     background-color: var(--primary-bg-color);
 }
 
 /* Header and Footer Styling */
 header {
-    background-color: var(--secondary-bg-color);
+    /* background-color: var(--secondary-bg-color); */
     text-align: center;
     margin: auto;
 }
@@ -109,14 +110,14 @@ main {
     padding: 5px 10px;
 }
 .buttons{
-    background-color: pink;
+    /* background-color: pink; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
 }
 
 #equals{
-    background-color: blue;
+    background-color: var(--emphasis-color-1);
     grid-column-end: span 3;
 }
 
@@ -127,9 +128,35 @@ main {
     justify-content: flex-end; /* Align content to the bottom */
 }
 
-#result_display{
-    font-size: 1.4em;
+#input_display{
+    font-size: 1.3rem;
     margin-bottom: 10px;
-    padding-bottom: 10px;
-    font-weight: bold
+    padding-bottom: 5px;
+    min-height: calc(1.4rem * 2);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    align-items: center;
+}
+
+#result_display{
+    font-size: 1.3rem;
+
+    padding-bottom: 5px;
+    min-height: calc(1.4rem * 2);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.operator{
+    padding: 0 5px;
+}
+
+.input_value_elemet{
+    padding-right: 5px;
+    font-weight: normal;
 }

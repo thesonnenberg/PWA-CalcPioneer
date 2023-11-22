@@ -1,11 +1,12 @@
 const CACHE_NAME = 'my-cache-name-v1';
 const URLS_TO_CACHE = [
-    '/index.html',
-    '/backendAPI.js', // Corrected the typo from 'packendAPI.js' to 'backendAPI.js'
+    '/calculator.html',
     '/manifest.json',
     '/favicon.ico',
     '/images/icon_400x400.png',
-    '/gui_manager.js'
+    '/gui_manager.js',
+    '/math_parser.js',
+    '/styles.css',
 ];
 
 // Installing and Caching Resources
