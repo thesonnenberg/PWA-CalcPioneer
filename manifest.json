@@ -1,7 +1,7 @@
 {
     "name": "PWA CalcPioneer",
     "short_name": "PWA CalcPioneer",
-    "start_url": "/calculator_app.html",
+    "start_url": "/PWA-CalcPioneer/calculator_app.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
