@@ -1,13 +1,13 @@
 const CACHE_NAME = 'my-cache-name-v1';
 const URLS_TO_CACHE = [
-    '/calculator_app.html',
-    '/manifest.json',
-    '/images/favicon.ico',
-    '/images/icon_400x400.png',
-    '/scripts/gui_manager.js',
-    '/scripts/math_parser.js',
-    '/styles/style.css',
-    '/COPYING.txt',
+    '/PWA-CalcPioneer/calculator_app.html',
+    '/PWA-CalcPioneer/manifest.json',
+    '/PWA-CalcPioneer/images/favicon.ico',
+    '/PWA-CalcPioneer/images/icon_400x400.png',
+    '/PWA-CalcPioneer/scripts/gui_manager.js',
+    '/PWA-CalcPioneer/scripts/math_parser.js',
+    '/PWA-CalcPioneer/styles/style.css',
+    '/PWA-CalcPioneer/COPYING.txt',
 ];
 
 // Installing and Caching Resources
@@ -16,7 +16,6 @@ self.addEventListener('install', event => {
         caches.open(CACHE_NAME)
             .then(cache => cache.addAll(URLS_TO_CACHE))
     );
-    window.location.href = '/calculator_app.html'
 });
 
 // Fetch Event Handling
