@@ -61,11 +61,12 @@ h3 {
 button {
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
-    padding: 5px 10px;
+    padding: 10px 5px;
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
     font-weight: bold;
+    border-radius: 1rem;
 }
 
 button:hover {
@@ -89,7 +90,7 @@ header {
 }
 
 footer {
-    background-color: var(--secondary-bg-color);
+    background-color: var(--primary-bg-color);
     text-align: center;
     padding: 3px;
 }
@@ -131,6 +132,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Align content to the bottom */
+    border-radius: 1rem;
 }
 
 #input_display{
