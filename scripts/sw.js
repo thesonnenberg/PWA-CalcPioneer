@@ -24,15 +24,22 @@ self.addEventListener('fetch', event => {
         caches.match(event.request)
             .then(response => {
                 if (response) {
-                    return response;
+                    return response; // Return cached response if available
                 }
-                return fetch(event.request).catch(() => {
-                    console.log(`Error: Failed to fetch resource: ${event.request.url}`)
-                });
+                return fetch(event.request)
+                    .then(response => {
+                        // Cache the fetched response for future use
+                        const clonedResponse = response.clone();
+                        caches.open(CACHE_NAME)
+                            .then(cache => cache.put(event.request, clonedResponse));
+                        return response;
+                    })
+                    .catch(() => {
+                        console.log(`Error: Failed to fetch resource: ${event.request.url}`);
+                    });
             })
     );
 });
-
 
 // Activate Event - Cache Management
 self.addEventListener('activate', event => {
