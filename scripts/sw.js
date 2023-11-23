@@ -7,7 +7,7 @@ const URLS_TO_CACHE = [
     '/PWA-CalcPioneer/scripts/gui_manager.js',
     '/PWA-CalcPioneer/scripts/math_parser.js',
     '/PWA-CalcPioneer/styles/style.css',
-    '/PWA-CalcPioneer/COPYING.txt',
+    '/PWA-CalcPioneer/pretty_license.html',
 ];
 
 // Installing and Caching Resources
