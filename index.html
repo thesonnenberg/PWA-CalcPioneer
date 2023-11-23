@@ -23,7 +23,7 @@
 
 <script defer>
   function redirectToCalculatorApp() {
-    window.location.href = "/calculator_app.html";
+    window.location.href = "/PWA-CalcPioneer/calculator_app.html";
   }
 
   window.addEventListener('appinstalled', (evt) => {
@@ -31,7 +31,7 @@
     redirectToCalculatorApp();
   });
   if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/scripts/sw.js')
+      navigator.serviceWorker.register('/PWA-CalcPioneer/scripts/sw.js')
       .then(() => {
         console.log("Service Worker Registered")
       });
