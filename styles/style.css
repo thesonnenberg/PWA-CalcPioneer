@@ -132,7 +132,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Align content to the bottom */
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0;
 }
 
 #input_display{
