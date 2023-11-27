@@ -2,28 +2,26 @@
 :root {
     /* Background colors */
     --primary-bg-color: #ffffff;
-    --secondary-bg-color: #f5f5f5;
+    --secondary-bg-color: #79deff;
     
     /* Text color */
     --text-color: #333333;
     
     /* Accent color */
-    --accent-color: #ff0000;
+    --accent-color: #fe753d;
     
     /* Emphasis colors */
-    --emphasis-color-1: #0013ff;
-    --emphasis-color-2: #00ccff;
-    --emphasis-color-3: #cc00ff;
+    --emphasis-color-1: #325973;
     
     /* Button colors */
     --button-bg-color: var(
     --accent-color);
     --button-text-color: #ffffff;
-    --button-hover-color: #ff3333;
+    --button-hover-color: #16394f;
 }
 
 /* Default styling */
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -33,33 +31,67 @@
 p {
     font-size: 1.2rem;
     color: var(--text-color);
-    margin: 1em 0;
 }
 
 /* Styling for <h1> element */
 h1 {
-    margin: 0;
+    margin: 1em 0 0.5em 0;
     font-size: 2rem;
     font-weight: bold;
-    color: var(--text-color);
+    color: var(--emphasis-color-1);
 }
 
 /* Styling for <h2> element */
 h2 {
-    margin: 1em 0;
-    font-size: 24px;
+    margin: 0.8em 0 0.4em 1em;
+    font-size: 1.6rem;
     font-weight: bold;
-    color: var(--text-color);
+    color: var(--emphasis-color-1);
 }
 
 /* Styling for <h3> element */
 h3 {
-    margin: 1em 0;
-    font-size: 20px;
+    margin: 0.6em 0 0.2em 1em;
+    font-size: 1.4rem;
     font-weight: bold;
-    color: var(--text-color);
+    color: var(--emphasis-color-1)
 }
 
 section {
-    padding: 2em;
+    margin: 0.5em;
+    padding: 0.1em 0.8em 1em;
+    background-color: var(--primary-bg-color);
+    border-radius: 1em;
+    border: 0.15rem solid var(--emphasis-color-1);
+}
+
+body{
+    background-color: var(--secondary-bg-color)
+}
+
+ul{
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    color: var(--text-color)
+}
+
+li{
+    padding: 0.2rem 0;
+}
+
+@media (min-width: 600px) {
+  section {
+    margin: 2em;
+    padding: 0.5em 2em 1em;
+    /* border: none; */
+    box-shadow: 0 0 2em 1px var(--emphasis-color-1);
+  }
+}
+
+@media (min-width: 950px) {
+    section{
+        max-width: 800px;
+        margin: 2em auto;
+    }
+
 }
