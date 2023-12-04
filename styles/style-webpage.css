@@ -66,7 +66,7 @@ section {
 }
 
 body{
-    background-color: var(--secondary-bg-color)
+    background-color: var(--secondary-bg-color);
 }
 
 ul{

@@ -4,6 +4,8 @@ function numberExpressionEventListener() {
     buttons.forEach(button => {
         button.addEventListener('click', function() {
             appendToInputField(this.dataset.value)
+            this.blur()
+            console.log(this)
             
         });
     });
